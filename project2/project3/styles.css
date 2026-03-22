@@ -1,0 +1,95 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+} 
+body{
+    background-color: rgb(236, 221, 226);
+}
+nav{
+    align-items: center;
+    display: flex; 
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.h2 span{
+    color: rgb(224, 67, 67);
+}
+h2{
+    color: grey;
+    font-size: 2rem;
+}
+ul{
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 250px;
+}
+form{
+    display: flex;
+}
+input{
+    background-color: lightgrey;
+    border: none;
+     border-radius: 5px;
+}
+nav button{
+    background-color:  rgb(224, 67, 67);;
+  border: none;
+  color: white;
+  padding: 5px;
+   border-radius: 5px;
+}
+ul a:hover{
+  padding: 3px;
+    border-radius: 5px;
+background-color:  rgb(224, 67, 67);
+}
+main{ 
+    padding: 30px;
+    padding-left: 50px;
+ color: white;
+    background-color:  rgb(224, 67, 67);
+}
+main h2{
+color: white;
+text-align: center;
+letter-spacing: 5px;
+}
+.h12{
+    font-size: 3rem;
+}
+.cards_cont{
+    display: flex;
+justify-content: space-around;
+padding-bottom: 20px;
+gap: 30px;
+}
+.pic{
+    width: 100%; 
+}
+.name{
+    padding: 15px;
+}
+.desc{
+    color:black;
+    padding-bottom: 20px;
+    line-height: 1.5;
+    font-size: 0.5rem;
+}
+main button{
+    background-image: linear-gradient( rgb(209, 71, 71), rgb(224, 67, 67), rgb(170, 46, 46));
+ color: white;
+ border: none;
+ box-shadow: 0px 0px 5px white;
+ padding: 8px;
+}
+footer {
+    display: flex;
+    background-color: lightgray;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 80px;
+}

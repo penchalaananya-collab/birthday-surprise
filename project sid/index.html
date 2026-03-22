@@ -1,0 +1,233 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Love ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffd6e7;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Title */
+h1 {
+    margin-top: 100px;
+    font-size: 50px;
+    color: #e60033;
+}
+
+/* Grid */
+.gifts {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+/* EMOJI GIFT */
+ .gift {
+    font-size: 90px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    transition: transform 0.2s;
+}
+ .memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    max-width: 800px;
+    margin: auto; /* center on big screens */
+}
+
+.memory-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: contain; /* show full image */
+    background: white;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}   
+.memory-grid img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+/* Even bigger on larger screens */
+@media (min-width: 600px) {
+    .gift {
+        font-size: 110px;
+    }
+}
+/* Bounce animation */
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Tap effect */
+.gift:active {
+    transform: scale(0.8);
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* First gift text */
+#gift1 p {
+    font-size: 20px;
+    max-width: 90%;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Memory images */
+.memory {
+    width: 90%;
+    max-width: 250px;
+    margin: 10px auto;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    background: #e60033;
+    color: white;
+    border-radius: 12px;
+}
+
+/* Floating hearts ❤️ */
+.heart {
+    position: fixed;
+    color: #e60033;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(100vh);}
+    100% {transform: translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎂 Happy Birthday Love ❤️</h1>
+
+<!-- 💝 EMOJI GIFT BOXES -->
+<div class="gifts">
+    <div class="gift" onclick="openSection('gift1')">💝</div>
+    <div class="gift" onclick="openSection('gift2')">💝</div>
+    <div class="gift" onclick="openSection('gift3')">💝</div>
+    <div class="gift" onclick="openSection('gift4')">💝</div>
+</div>
+
+<!-- Gift 1 -->
+<div id="gift1" class="section">
+    <h2>💌 My Love for You</h2>
+ <p>
+    I know I have hurt you many times, more than I ever wanted to, and I’m truly sorry for every single moment that caused you pain.  
+    You mean so much to me, more than I can ever express in words. You are not just someone I love, you are my comfort, my happiness, and my safe place.  
+
+    I may not always show it perfectly, and I may make mistakes, but please know that my love for you is always real and always growing.  
+    I’m trying every day to become a better person for you, for us, and for our future.  
+
+    You deserve all the love, respect, and happiness in this world, and I promise I will keep trying to give you that.  
+    Thank you for staying, for understanding me, and for loving me even when I didn’t deserve it.  
+
+    You are truly the most special person in my life, and I am so lucky to have you ❤️
+</p>
+    <button onclick="goHome()">Back</button>
+</div>
+
+<!-- Gift 2 -->
+<div id="gift2" class="section">
+    <h2>📸 Our Memories</h2> 
+    <div class="memory-grid">
+    <img src="siddu1.jpeg" class="memory">
+    <img src="siddu2.jpeg" class="memory">
+    <img src="siddu3.jpeg" class="memory">
+    <img src="siddu4.jpeg" class="memory">
+</div>
+    <button onclick="goHome()">Back</button>
+</div>
+
+<!-- Gift 3 -->
+<div id="gift3" class="section">
+    <h2>✨ A New Beginning</h2>
+    <p>
+        <h2>✨ Things You Have to Change for this year</h2>
+
+<p>
+    📚 Focus on your studies seriously<br><br>
+    🎯 Try to clear all your backlogs<br><br>
+    💸 Don’t take money from anyone unnecessarily<br><br>
+    😂 And most importantly… don’t ignore me or my messages!
+</p>
+        Leave behind all worries and negativity.  
+        You deserve happiness and success ❤️
+    </p>
+    <button onclick="goHome()">Back</button>
+</div>
+
+<!-- Gift 4 -->
+<div id="gift4" class="section">
+    <h2>🎁 Surprise</h2>
+    <p>
+        You are my everything ❤️<br><br>
+        Enjoy your day. I hope this make you feel special.
+        Once again a very Happy Birthday!
+    </p>
+    <button onclick="goHome()">Back</button>
+</div>
+
+<script>
+function openSection(id) {
+    document.querySelector('.gifts').style.display = 'none';
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function goHome() {
+    document.querySelector('.gifts').style.display = 'grid';
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+}
+
+/* Floating hearts */
+setInterval(() => {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 15 + 15) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}, 400);
+</script>
+
+</body>
+</html>
